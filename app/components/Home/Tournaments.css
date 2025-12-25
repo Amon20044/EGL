@@ -1,0 +1,51 @@
+.tournaments-section {
+    padding: var(--space-16) var(--space-8);
+    display: flex;
+    justify-content: center;
+}
+
+.tournaments-container {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.tournaments-header {
+    margin-bottom: var(--space-10);
+}
+
+.tournaments-badge {
+    display: block;
+    font-size: var(--text-3xl);
+    font-weight: var(--font-medium);
+    background: linear-gradient(135deg, rgb(255, 255, 255) 0%, rgba(146, 146, 146, 0.67) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: var(--space-4);
+}
+
+.tournaments-badge span {
+    color: var(--color-accent);
+    -webkit-text-fill-color: var(--color-accent);
+}
+
+.tournaments-heading {
+    font-size: clamp(1.5rem, 4vw, 2.25rem);
+    font-weight: var(--font-regular);
+    line-height: var(--leading-snug);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.78) 0%, rgba(146, 146, 146, 0.5) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    max-width: 700px;
+}
+
+@media (max-width: 768px) {
+    .tournaments-section {
+        padding: var(--space-8) var(--space-4);
+    }
+}

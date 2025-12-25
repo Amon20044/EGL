@@ -17,7 +17,7 @@
 
 .cta-badge {
     font-size: var(--text-3xl);
-    font-weight: var(--font-regular);
+    font-weight: var(--font-medium);
     color: #333;
     letter-spacing: 0.02em;
 }

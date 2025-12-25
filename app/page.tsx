@@ -1,5 +1,7 @@
 import Hero from "./components/Home/Hero";
 import Features from "./components/Home/Features";
+import InfoCards from "./components/Home/InfoCards";
+import Tournaments from "./components/Home/Tournaments";
 import CTASection from "./components/Home/CTASection";
 
 export default function Home() {
@@ -33,6 +35,7 @@ export default function Home() {
         }
         items={[
           {
+            width: 40,
             icon: "/Free.svg",
             title: "Free Access",
             description: (
@@ -52,6 +55,7 @@ export default function Home() {
             ),
           },
           {
+            width: 60,
             icon: "/movie.svg",
             title: (
               <>
@@ -76,6 +80,84 @@ export default function Home() {
             ),
           },
         ]}
+      />
+
+      {/* Why EVOLVE - Dark background with WhyBG overlay */}
+      <InfoCards
+        badge="Why EVOLVE ?"
+        heading={
+          <>
+            Because every gamer deserves more than just matches — they deserve growth, recognition, and a real path forward, EVOLVE is built to fix :
+          </>
+        }
+        darkBg={true}
+        bgOverlay="/WhyBG.svg"
+        items={[
+          {
+            title: "Community",
+            image: "/community.svg",
+          },
+          {
+            title: "Compete",
+            image: "/compete.svg",
+          },
+          {
+            title: "Visibility",
+            image: "/visiblity.svg",
+          },
+        ]}
+      />
+
+      {/* How EVOLVE Works - Card mode with steps */}
+      <InfoCards
+        badge="How EVOLVE Works ?"
+        heading={
+          <>
+            A clear, performance-based path where your grind, wins, and
+            milestones guide your rise to the top.
+          </>
+        }
+        card={true}
+        darkBg={true}
+        items={[
+          {
+            image: "/create.svg",
+            title: "Create Your Account",
+          },
+          {
+            image: "/competeandclimb.svg",
+            title: "Compete and Climb",
+          },
+          {
+            image: "/risetothetop.svg",
+            title: "Rise to the Top",
+          },
+        ]}
+      />
+
+      {/* Upcoming Tournaments */}
+      <Tournaments
+        badge={
+          <>
+            Upcoming <span>Tournaments</span>
+          </>
+        }
+        heading={
+          <>
+            Every tournament is a new stage to prove your skill, make your
+            mark, and move closer to the pros.
+          </>
+        }
+        tournament={{
+          image: "/tournaments.webp",
+          tag: "BGMI",
+          dateRange: "24 Apr - 30 Apr",
+          title: "Premium Showdown Week 1",
+          description:
+            "EGL tournaments are the backbone of the EVOLVE ecosystem — structured, recurring, and performance-based competitions that let players compete, improve, and rise through clear tiers (C → B → A → S).",
+          detailsLink: "/tournaments/1",
+          registerLink: "/register",
+        }}
       />
 
       <CTASection
@@ -103,4 +185,5 @@ export default function Home() {
     </div>
   );
 }
+
 
