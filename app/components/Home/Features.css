@@ -1,0 +1,187 @@
+.features-section {
+    padding: var(--space-16) var(--space-8);
+    display: flex;
+    justify-content: center;
+}
+
+.features-card {
+    max-width: 1200px;
+    width: 100%;
+    background: linear-gradient(145deg, #f5f5f5 0%, #e8e8e8 100%);
+    border-radius: 24px;
+    padding: var(--space-16);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.features-badge {
+    display: inline-block;
+    font-size: var(--text-3xl);
+    font-weight: var(--font-regular);
+    color: #333;
+    margin-bottom: var(--space-4);
+    letter-spacing: 0.02em;
+}
+
+.features-heading {
+    font-size: clamp(1.5rem, 4vw, 2.25rem);
+    font-weight: var(--font-regular);
+    line-height: var(--leading-snug);
+    background: linear-gradient(135deg,
+            rgba(17, 17, 17, 0.78) 0%,
+            rgba(83, 83, 83, 0.62) 100%);
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: var(--space-8);
+}
+
+.features-heading strong {
+    font-weight: var(--font-bold);
+}
+
+/* Grid */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+}
+
+/* Feature Item with Gradient Border & Radial Gradients */
+.feature-item {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-4);
+    background:
+        radial-gradient(ellipse 80% 80% at 5% 50%, rgba(100, 100, 100, 0.15) 0%, transparent 50%),
+        radial-gradient(ellipse 60% 60% at 95% 10%, rgba(80, 80, 80, 0.12) 0%, transparent 40%),
+        linear-gradient(145deg, #2a2a2a 0%, #1f1f1f 100%);
+    border-radius: 16px;
+    padding: var(--space-5);
+    transition: transform var(--transition-base);
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Shiny Gradient Border */
+.feature-item::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 16px;
+    border: 1px solid transparent;
+    background: linear-gradient(135deg,
+            rgba(255, 255, 255, 0.2) 0%,
+            rgba(255, 255, 255, 0.05) 30%,
+            rgba(255, 255, 255, 0.02) 50%,
+            rgba(255, 255, 255, 0.05) 70%,
+            rgba(255, 255, 255, 0.15) 100%) border-box;
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* Texture Overlay */
+.feature-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('/texture.svg') center/cover no-repeat;
+    opacity: 0.4;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.feature-item>* {
+    position: relative;
+    z-index: 1;
+}
+
+.feature-item:hover {
+    transform: translateY(-2px);
+}
+
+.feature-item--full {
+    grid-column: span 2;
+}
+
+.feature-icon {
+    flex-shrink: 0;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature-icon img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
+
+.feature-content {
+    flex: 1;
+}
+
+.feature-title {
+    font-size: var(--text-lg);
+    font-weight: var(--font-bold);
+    color: #ffffff;
+    margin-bottom: var(--space-1);
+}
+
+.feature-title span {
+    font-weight: var(--font-light);
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.feature-description {
+    font-size: var(--text-sm);
+    font-weight: var(--font-light);
+    line-height: var(--leading-relaxed);
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.feature-description strong {
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: var(--font-medium);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .features-section {
+        padding: var(--space-8) var(--space-4);
+    }
+
+    .features-card {
+        padding: var(--space-6);
+        border-radius: 20px;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-item--full {
+        grid-column: span 1;
+    }
+}
+
+@media (max-width: 480px) {
+    .feature-item {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+}
