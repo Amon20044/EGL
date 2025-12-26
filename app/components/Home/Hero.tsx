@@ -16,7 +16,7 @@ export default function Hero({
     title,
     subtitle = "A ecosystem where talent meets structure — and underdogs evolve into pros.",
     ctaText = "Register Now",
-    ctaLink = "/register",
+    ctaLink = "#",
     heroImage = "/Hero.webp",
 }: HeroProps) {
     return (

@@ -17,7 +17,7 @@ export default function Footer({
     heading = "Ready to elevate your Esports Journey?",
     links = [
         { label: "Home", href: "/" },
-        { label: "About Us", href: "/about" },
+        { label: "About Us", href: "/#features" },
         { label: "Privacy Policy", href: "/privacy" },
         { label: "Terms & Conditions", href: "/terms" },
     ],

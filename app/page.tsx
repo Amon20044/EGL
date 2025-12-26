@@ -20,7 +20,7 @@ export default function Home() {
         }
         subtitle="A ecosystem where talent meets structure — and underdogs evolve into pros."
         ctaText="Register Now"
-        ctaLink="/register"
+        ctaLink="#"
         heroImage="/Hero.webp"
       />
 
@@ -106,6 +106,7 @@ export default function Home() {
 
       {/* How EVOLVE Works - Card mode with steps */}
       <InfoCards
+        bgOverlay="/WhyBG.svg"
         badge="How EVOLVE Works ?"
         heading={
           <>
@@ -152,7 +153,7 @@ export default function Home() {
           description:
             "EGL tournaments are the backbone of the EVOLVE ecosystem — structured, recurring, and performance-based competitions that let players compete, improve, and rise through clear tiers (C → B → A → S).",
           detailsLink: "/tournaments/1",
-          registerLink: "/register",
+          registerLink: "#",
         }}
       />
 
