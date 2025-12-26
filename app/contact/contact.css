@@ -78,7 +78,8 @@
 }
 
 .launch-badge {
-    display: inline-flex;
+    display: block;
+    width: fit-content;
     align-items: center;
     gap: var(--space-2);
     padding: var(--space-2) var(--space-4);
@@ -114,6 +115,7 @@
 }
 
 .register-title {
+    /* display: inline; */
     font-size: clamp(2.5rem, 5vw, 4rem);
     font-weight: var(--font-bold);
     line-height: 1.1;
@@ -537,6 +539,10 @@
 
 /* Responsive */
 @media (max-width: 1024px) {
+    .register-title {
+        display: inline-flex;
+        gap: var(--space-1);
+    }
 
     .register-container {
         grid-template-columns: 1fr;
