@@ -41,9 +41,8 @@ export default function InfoCards({
                     {items.map((item, index) => (
                         <div
                             key={index}
-                            className={`info-card`}
                         >
-                            <Image src={item.image} alt={item.title} width={280} height={280} className="info-card-img" />
+                            <Image src={item.image} width={400} height={400} alt={item.title} className="info-card-img" />
                         </div>
                     ))}
                 </div>
