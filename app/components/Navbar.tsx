@@ -82,7 +82,7 @@ export default function Navbar() {
                         <Image
                             objectFit="fill"
                             loading="eager"
-                            src="/EGL.svg"
+                            src="/Logo.webp"
                             alt="Evolve Gamers League"
                             width={1080}
                             height={1080}
