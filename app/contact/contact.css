@@ -149,7 +149,6 @@
     line-height: var(--leading-relaxed);
     color: rgba(255, 255, 255, 0.7);
     margin-bottom: var(--space-8);
-    max-width: 500px;
 }
 
 /* Benefits */
@@ -547,10 +546,6 @@
     .register-content {
         padding-right: 0;
         text-align: flex-start;
-    }
-
-    .register-subtitle {
-        margin: 0 auto var(--space-8);
     }
 
     .benefits-list {
