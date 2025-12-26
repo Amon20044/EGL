@@ -168,7 +168,7 @@ export default function ContactPage() {
         }
 
         if (mobile && !INDIAN_PHONE_REGEX.test(mobile.replace(/\s/g, ""))) {
-            errors.mobile = "Enter valid Indian number (10 digits)";
+            errors.mobile = "Please enter a valid mobile number";
         }
 
         if (!subject || subject.length < 3) {
