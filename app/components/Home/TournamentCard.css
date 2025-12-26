@@ -133,6 +133,14 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+    .tcard-title {
+        font-size: var(--text-xl);
+    }
+
+    .tcard-desc {
+        font-size: var(--text-md);
+    }
+
     .tcard-actions {
         flex-direction: column;
         align-items: center;

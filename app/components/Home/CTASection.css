@@ -72,6 +72,14 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+    .cta-badge {
+        font-size: var(--text-xl);
+    }
+
+    .cta-heading {
+        font-size: clamp(1.2rem, 3vw, 1.8rem);
+    }
+
     .cta-section {
         padding: var(--space-8) var(--space-4) 0;
     }

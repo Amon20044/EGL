@@ -168,6 +168,14 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+    .features-heading {
+        font-size: clamp(1.2rem, 3vw, 1.8rem);
+    }
+
+    .features-badge {
+        font-size: var(--text-xl);
+    }
+
     .features-section {
         padding: var(--space-8) var(--space-4);
     }
@@ -187,6 +195,14 @@
 }
 
 @media (max-width: 480px) {
+    .features-heading {
+        font-size: clamp(1.2rem, 3vw, 1.8rem);
+    }
+
+    .features-badge {
+        font-size: var(--text-xl);
+    }
+
     .feature-item {
         flex-direction: column;
         text-align: center;

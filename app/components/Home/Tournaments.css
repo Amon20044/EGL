@@ -45,6 +45,14 @@
 }
 
 @media (max-width: 768px) {
+    .tournaments-heading {
+        font-size: clamp(1.2rem, 3vw, 1.8rem);
+    }
+
+    .tournaments-badge {
+        font-size: var(--text-xl);
+    }
+
     .tournaments-section {
         padding: var(--space-8) var(--space-4);
     }
