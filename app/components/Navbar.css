@@ -5,12 +5,8 @@
     left: 0;
     right: 0;
     z-index: 1000;
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    background: linear-gradient(to bottom,
-            rgba(0, 0, 0, 0.7) 0%,
-            rgba(0, 0, 0, 0.5) 50%,
-            rgba(0, 0, 0, 0) 100%);
+    background-color: #11111160;
+    backdrop-filter: blur(4px);
     padding: 1rem 2rem;
     transition: all 0.3s ease;
 }
@@ -18,8 +14,6 @@
 .navbar-container {
     max-width: 1200px;
     margin: 8px auto;
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -45,8 +39,8 @@
 }
 
 .nav-link {
+    background-blend-mode: overlay;
     color: rgba(255, 255, 255, 0.7);
-    text-decoration: none;
     font-size: 0.95rem;
     font-weight: 500;
     letter-spacing: 0.02em;
@@ -118,7 +112,6 @@
     border: 1.2px solid rgba(255, 255, 255, 0.50);
     border-radius: 8px;
     color: #ffffff;
-    text-decoration: none;
     font-size: 0.9rem;
     font-weight: 500;
     white-space: nowrap;
@@ -147,7 +140,8 @@
     border: none;
     cursor: pointer;
     padding: 0.5rem;
-    z-index: 1001;
+    z-index: 10001;
+    position: relative;
 }
 
 .hamburger-line {
@@ -179,16 +173,19 @@
         position: fixed;
         top: 0;
         left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(15, 15, 15, 0.98);
+        width: 100vw;
+        height: 100vh;
+        background: rgba(10, 10, 10, 0.98);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
         flex-direction: column;
         align-items: center;
         justify-content: center;
         gap: 2rem;
-        z-index: 999;
+        z-index: 9999;
         opacity: 0;
         visibility: hidden;
+        pointer-events: none;
         transition: all 0.3s ease;
     }
 
@@ -217,6 +214,7 @@
 
     .mobile-menu-btn {
         display: flex;
+        z-index: 10000;
     }
 
     .navbar-container {
@@ -227,6 +225,7 @@
     .nav-toggle:checked~.nav-links-left {
         opacity: 1;
         visibility: visible;
+        pointer-events: auto;
     }
 
     /* Animate hamburger to X when checked */

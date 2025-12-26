@@ -41,9 +41,9 @@ export default function InfoCards({
                     {items.map((item, index) => (
                         <div
                             key={index}
-                            className={`info-card ${darkBg ? "info-card--light" : "info-card--dark"}`}
+                            className={`info-card`}
                         >
-                            <Image src={item.image} alt={item.title} width={280} height={160} className="info-card-img" />
+                            <Image src={item.image} alt={item.title} width={280} height={280} className="info-card-img" />
                         </div>
                     ))}
                 </div>

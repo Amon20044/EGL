@@ -57,11 +57,7 @@ export default function Home() {
           {
             width: 60,
             icon: "/movie.svg",
-            title: (
-              <>
-                Your Journey, <span>Tracked</span>
-              </>
-            ),
+            title: "Your Journey, Tracked",
             description: (
               <>
                 Every match and milestone shapes your legacy — your grind{" "}

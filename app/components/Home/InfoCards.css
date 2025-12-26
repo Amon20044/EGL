@@ -9,8 +9,8 @@
 .info-section--dark {
     background: linear-gradient(to bottom,
             #17171700 0%,
-            #171717 10%,
-            #171717 90%,
+            #171717 5%,
+            #171717 95%,
             #17171700 100%)
 }
 
@@ -18,7 +18,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    width: 60%;
+    width: 40%;
     height: 100%;
     opacity: 0.15;
     pointer-events: none;
@@ -67,7 +67,7 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    max-width: 800px;
+    max-width: 100%;
 }
 
 .info-container--card .info-heading {
