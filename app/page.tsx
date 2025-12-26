@@ -152,7 +152,7 @@ export default function Home() {
           title: "Premium Showdown Week 1",
           description:
             "EGL tournaments are the backbone of the EVOLVE ecosystem — structured, recurring, and performance-based competitions that let players compete, improve, and rise through clear tiers (C → B → A → S).",
-          detailsLink: "/tournaments/1",
+          detailsLink: "/#",
           registerLink: "#",
         }}
       />
