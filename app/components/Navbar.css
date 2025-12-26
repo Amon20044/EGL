@@ -5,10 +5,18 @@
     left: 0;
     right: 0;
     z-index: 1000;
-    background-color: #11111160;
-    backdrop-filter: blur(4px);
+
+    /* Premium fade: strong at top → soft mid → invisible bottom */
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.8) 0%,
+            rgba(0, 0, 0, 0.3) 80%,
+            rgba(0, 0, 0, 0) 100%);
+
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+
     padding: 1rem 2rem;
-    transition: all 0.3s ease;
+    transition: background 0.3s ease, backdrop-filter 0.3s ease;
 }
 
 .navbar-container {

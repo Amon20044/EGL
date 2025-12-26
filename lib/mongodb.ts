@@ -4,7 +4,8 @@ import { MongoClient, Db } from "mongodb";
 export const DB_CONFIG = {
     DATABASE_NAME: "evolve_gamer_league",
     COLLECTIONS: {
-        CONTACTS: "contacts"
+        CONTACTS: "contacts",
+        PRE_REGISTRATIONS: "pre_registrations",
     },
 } as const;
 
