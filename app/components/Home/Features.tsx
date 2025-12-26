@@ -26,7 +26,7 @@ export default function Features({
     }
 
     return (
-        <section className="features-section">
+        <section id="features" className="features-section">
             <div className="features-card">
                 {/* Header */}
                 {badge && <span className="features-badge">{badge}</span>}

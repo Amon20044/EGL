@@ -54,8 +54,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/og-image.png",
-        width: 1200,
-        height: 630,
+        width: 1039,
+        height: 351,
         alt: "EVOLVE Gamer League - India's Premier Esports Platform",
       },
     ],
@@ -71,7 +71,6 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",
   },
-  manifest: "/site.webmanifest",
   metadataBase: new URL(SITE_URL),
   alternates: {
     canonical: "/",

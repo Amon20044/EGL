@@ -1,8 +1,24 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import "./Navbar.css";
 
 export default function Navbar() {
+    const pathname = usePathname();
+
+    // Helper function to check if link is active
+    const isActive = (href: string) => {
+        if (href === "/") {
+            return pathname === "/";
+        }
+        if (href.startsWith("/#")) {
+            return pathname === "/" && typeof window !== "undefined" && window.location.hash === href.slice(1);
+        }
+        return pathname.startsWith(href);
+    };
+
     return (
         <nav className="navbar">
             <div className="navbar-container">
@@ -12,17 +28,17 @@ export default function Navbar() {
                 {/* Left side - Navigation Links */}
                 <ul className="nav-links nav-links-left SlateForOnePlus">
                     <li>
-                        <Link href="/" className="nav-link active">
+                        <Link href="/" className={`nav-link ${isActive("/") ? "active" : ""}`}>
                             Home
                         </Link>
                     </li>
                     <li>
-                        <Link href="/about" className="nav-link">
+                        <Link href="/#features" className={`nav-link ${pathname === "/" ? "" : ""}`}>
                             About Us
                         </Link>
                     </li>
                     <li>
-                        <Link href="/contact" className="nav-link">
+                        <Link href="/contact" className={`nav-link ${isActive("/contact") ? "active" : ""}`}>
                             Contact Us
                         </Link>
                     </li>
