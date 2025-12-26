@@ -91,15 +91,15 @@ export default function Home() {
         items={[
           {
             title: "Community",
-            image: "/community.svg",
+            image: "/Comm.webp",
           },
           {
             title: "Compete",
-            image: "/compete.svg",
+            image: "/Comp.webp",
           },
           {
             title: "Visibility",
-            image: "/visiblity.svg",
+            image: "/Vis.webp",
           },
         ]}
       />
