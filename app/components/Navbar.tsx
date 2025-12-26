@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import "./Navbar.css";
 
@@ -41,7 +42,7 @@ export default function Navbar() {
                         </Link>
                     </li>
                     <li>
-                        <Link href="/#features" className="nav-link" onClick={closeMenu}>
+                        <Link href="/#features" className={`nav-link ${isActive("/#features") ? "active" : ""}`} onClick={closeMenu}>
                             About Us
                         </Link>
                     </li>
@@ -78,11 +79,15 @@ export default function Navbar() {
                 <div className="nav-logo">
                     <Link href="/" onClick={closeMenu}>
                         {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img
+                        <Image
+                            objectFit="fill"
+                            loading="eager"
                             src="/EGL.svg"
                             alt="Evolve Gamers League"
                             width={1080}
                             height={1080}
+                            quality={100}
+                            unoptimized={true}
                         />
                     </Link>
                 </div>
