@@ -1,12 +1,13 @@
 "use client";
 
-import Image from "next/image";
+import { useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import "./Navbar.css";
 
 export default function Navbar() {
     const pathname = usePathname();
+    const checkboxRef = useRef<HTMLInputElement>(null);
 
     // Helper function to check if link is active
     const isActive = (href: string) => {
@@ -19,26 +20,33 @@ export default function Navbar() {
         return pathname.startsWith(href);
     };
 
+    // Close mobile menu when a link is clicked
+    const closeMenu = () => {
+        if (checkboxRef.current) {
+            checkboxRef.current.checked = false;
+        }
+    };
+
     return (
         <nav className="navbar">
             <div className="navbar-container">
                 {/* Mobile Menu Toggle (CSS-only) */}
-                <input type="checkbox" id="nav-toggle" className="nav-toggle" />
+                <input type="checkbox" id="nav-toggle" className="nav-toggle" ref={checkboxRef} />
 
                 {/* Left side - Navigation Links */}
                 <ul className="nav-links nav-links-left SlateForOnePlus">
                     <li>
-                        <Link href="/" className={`nav-link ${isActive("/") ? "active" : ""}`}>
+                        <Link href="/" className={`nav-link ${isActive("/") ? "active" : ""}`} onClick={closeMenu}>
                             Home
                         </Link>
                     </li>
                     <li>
-                        <Link href="/#features" className={`nav-link ${pathname === "/" ? "" : ""}`}>
+                        <Link href="/#features" className="nav-link" onClick={closeMenu}>
                             About Us
                         </Link>
                     </li>
                     <li>
-                        <Link href="/contact" className={`nav-link ${isActive("/contact") ? "active" : ""}`}>
+                        <Link href="/contact" className={`nav-link ${isActive("/contact") ? "active" : ""}`} onClick={closeMenu}>
                             Contact Us
                         </Link>
                     </li>
@@ -49,6 +57,7 @@ export default function Navbar() {
                             target="_blank"
                             rel="noopener noreferrer"
                             className="discord-btn"
+                            onClick={closeMenu}
                         >
                             <svg
                                 className="discord-icon"
@@ -67,13 +76,13 @@ export default function Navbar() {
 
                 {/* Center - Logo */}
                 <div className="nav-logo">
-                    <Link href="/">
-                        <Image
+                    <Link href="/" onClick={closeMenu}>
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img
                             src="/EGL.svg"
                             alt="Evolve Gamers League"
-                            width={180}
-                            height={60}
-                            priority
+                            width={1080}
+                            height={1080}
                         />
                     </Link>
                 </div>

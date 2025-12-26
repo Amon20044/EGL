@@ -538,6 +538,7 @@
 
 /* Responsive */
 @media (max-width: 1024px) {
+
     .register-container {
         grid-template-columns: 1fr;
         gap: var(--space-8);
@@ -545,7 +546,7 @@
 
     .register-content {
         padding-right: 0;
-        text-align: center;
+        text-align: flex-start;
     }
 
     .register-subtitle {
@@ -553,11 +554,11 @@
     }
 
     .benefits-list {
-        align-items: center;
+        align-items: flex-start;
     }
 
     .trust-badges {
-        justify-content: center;
+        justify-content: flex-start;
     }
 }
 

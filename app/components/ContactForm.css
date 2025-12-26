@@ -82,6 +82,7 @@
 }
 
 @media (max-width: 768px) {
+
     .contact-form-wrapper {
         padding: 0 var(--space-4);
     }
